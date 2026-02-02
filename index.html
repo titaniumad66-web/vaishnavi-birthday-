@@ -98,6 +98,12 @@ h1{
   line-height:1.7;
   font-style:italic;
   color:#555;
+  opacity:0;
+  animation:fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn{
+  to{opacity:1}
 }
 
 /* floating elements */
@@ -105,7 +111,7 @@ h1{
   position:absolute;
   bottom:-40px;
   animation:float 7s linear infinite;
-  opacity:.85;
+  opacity:.8;
 }
 
 @keyframes float{
@@ -115,9 +121,9 @@ h1{
 .confetti{
   position:fixed;
   top:-10px;
-  width:12px;
-  height:12px;
-  animation:fall 3s linear infinite;
+  width:10px;
+  height:10px;
+  animation:fall 3.5s linear infinite;
 }
 
 @keyframes fall{
@@ -141,9 +147,9 @@ h1{
   </div>
 
   <div class="gallery">
-    <img src="i1.jpg" alt="memory 1">
-    <img src="i2.jpg" alt="memory 2">
-    <img src="i3.jpg" alt="memory 3">
+    <img src="i1.jpg">
+    <img src="i2.jpg">
+    <img src="i3.jpg">
   </div>
 
   <div class="cake">🎂🕯️</div>
@@ -170,15 +176,23 @@ const hearts=document.querySelector(".hearts");
 const balloons=document.querySelector(".balloons");
 const music=document.getElementById("music");
 
+music.volume = 0.25; // 🔉 softer on mobile
+
 document.body.addEventListener("click",()=>music.play(),{once:true});
 
 function togglePoem(){
   const p=document.getElementById("poem");
-  p.style.display = p.style.display==="block" ? "none" : "block";
+  if(p.style.display==="block"){
+    p.style.display="none";
+  }else{
+    p.style.display="block";
+    p.style.opacity="0";
+    p.style.animation="fadeIn 1.2s forwards";
+  }
 }
 
 function launchConfetti(){
-  for(let i=0;i<70;i++){
+  for(let i=0;i<40;i++){   // 🎊 reduced amount
     const c=document.createElement("div");
     c.className="confetti";
     c.style.left=Math.random()*100+"vw";
@@ -196,7 +210,7 @@ setInterval(()=>{
   h.style.fontSize=(Math.random()*20+18)+"px";
   hearts.appendChild(h);
   setTimeout(()=>h.remove(),7000);
-},320);
+},360);
 
 setInterval(()=>{
   const b=document.createElement("span");
@@ -204,7 +218,7 @@ setInterval(()=>{
   b.style.left=Math.random()*100+"vw";
   balloons.appendChild(b);
   setTimeout(()=>b.remove(),7000);
-},600);
+},650);
 
 setInterval(()=>{
   const item=document.createElement("span");
@@ -217,7 +231,7 @@ setInterval(()=>{
   item.style.animation="float 7s linear";
   document.body.appendChild(item);
   setTimeout(()=>item.remove(),7000);
-},750);
+},900);
 </script>
 
 </body>
