@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Vaii 🎂</title>
+
+
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+
+  margin:0;
+
+  min-height:100vh;
+
+  overflow:hidden;
+
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+
+  font-family:'Poppins',sans-serif;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  color:#444;
+
+}
+
+
+
+.wrapper{
+
+  width:100%;
+
+  padding:30px 18px;
+
+}
+
+
+
+h1{
+
+  color:#ff2e63;
+
+  margin-bottom:6px;
+
+  font-size:30px;
+
+}
+
+
+
+.date-highlight{
+
+  font-size:20px;
+
+  font-weight:600;
+
+  color:#ff2e63;
+
+  margin-bottom:20px;
+
+  animation:glowDate 1.8s infinite alternate;
+
+}
+
+
+
+@keyframes glowDate{
+
+  from{ text-shadow:0 0 6px #ffb3c1; }
+
+  to{ text-shadow:0 0 18px #ff2e63; }
+
+}
+
+
+
+.message{
+
+  max-width:520px;
+
+  margin:0 auto 22px;
+
+  font-size:16px;
+
+  line-height:1.7;
+
+}
+
+
+
+.gallery{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:12px;
+
+  margin-bottom:18px;
+
+  flex-wrap:wrap;
+
+}
+
+
+
+.gallery img{
+
+  width:95px;
+
+  height:130px;
+
+  object-fit:cover;
+
+  border-radius:18px;
+
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+
+  animation:floatPic 4s ease-in-out infinite;
+
+}
+
+
+
+.gallery img:nth-child(2){animation-delay:1s}
+
+.gallery img:nth-child(3){animation-delay:2s}
+
+
+
+@keyframes floatPic{
+
+  50%{transform:translateY(-10px)}
+
+}
+
+
+
+.cake{
+
+  font-size:58px;
+
+  margin:10px 0 18px;
+
+}
+
+
+
+.poem-btn{
+
+  background:#ff2e63;
+
+  color:white;
+
+  border:none;
+
+  padding:12px 22px;
+
+  border-radius:25px;
+
+  font-size:15px;
+
+  cursor:pointer;
+
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+
+}
+
+
+
+.poem{
+
+  display:none;
+
+  margin-top:18px;
+
+  font-size:15px;
+
+  line-height:1.7;
+
+  font-style:italic;
+
+  color:#555;
+
+  opacity:0;
+
+  animation:fadeIn 1.2s forwards;
+
+}
+
+
+
+@keyframes fadeIn{
+
+  to{opacity:1}
+
+}
+
+
+
+/* floating elements */
+
+.layer span{
+
+  position:absolute;
+
+  bottom:-40px;
+
+  animation:float 7s linear infinite;
+
+  opacity:.8;
+
+}
+
+
+
+@keyframes float{
+
+  to{transform:translateY(-900px);opacity:0}
+
+}
+
+
+
+.confetti{
+
+  position:fixed;
+
+  top:-10px;
+
+  width:10px;
+
+  height:10px;
+
+  animation:fall 3.5s linear infinite;
+
+}
+
+
+
+@keyframes fall{
+
+  to{transform:translateY(110vh) rotate(360deg)}
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="wrapper">
+
+  <h1>Happy Birthday Vaii 🎉</h1>
+
+
+
+  <div class="date-highlight">17th February 🎂</div>
+
+
+
+  <div class="message">
+
+    Today is about celebrating someone who brings warmth,
+
+    calm smiles, and quiet positivity wherever she goes.
+
+    Wishing you a year filled with peace, happiness,
+
+    and moments that truly matter ✨
+
+  </div>
+
+
+
+  <div class="gallery">
+
+    <img src="i1.jpg">
+
+    <img src="i2.jpg">
+
+    <img src="i3.jpg">
+
+  </div>
+
+
+
+  <div class="cake">🎂🕯️</div>
+
+
+
+  <button class="poem-btn" onclick="togglePoem()">Read a paragraph  ✨</button>
+
+
+
+  <div class="poem" id="poem">
+
+  Wish you many many happy returns of the day, my princess 🌹💞 <br>
+
+Vaiii, thank you for coming into my life… thank you for giving me a chance, thank you for believing in me, and last but not the least, thank you for giving me more and more happiness.  <br>
+
+Vaiii, you know whenever I see you or talk to you, all my stress fades away and I feel so calm.💖💫 <br>
+
+You have no idea how much you’ve changed me — my behaviour, my language, my dressing style, and so many other things. <br>
+
+ Vaiii, I will not make big promises, but I am always, always, always with you in every situation. I want to share all my happiness and victories with you… but promise me that you will share all your tears & sadness with me too.🥺  <br>
+
+Vaiii, I truly want to become the man you deserve. I love caring for you, pampering you, and making you feel happy and safe. Thank you, thank you, thank you for everything 🩵🩷 <br>
+
+Vaiii, I know today is your SP paper, so you might feel a little stressed… but believe me, you will score good marks. In these past days, I have seen your efforts, and no matter how many marks you get in 12th std . <br>
+
+You are meant to achieve your dream of becoming a good Chartered Accountant 💝. <br>
+
+My wishes are always with you, so relax, don’t take too much stress. The paper will be easy… just stay happy. 🩷 <br>
+
+Once again, many many happy returns of the day to my cute, loving, pure hearted, sensitive, niragus princess… 😚🥰🩷🩵💖💗🌹❣️ 🌸 <br>
+
+  </div>
+
+</div>
+
+
+
+<div class="layer hearts"></div>
+
+<div class="layer balloons"></div>
+
+
+
+<audio id="music" loop>
+
+  <source src="https://cdn.pixabay.com/audio/2022/03/09/audio_6f6c8bfa65.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+<script>
+
+const hearts=document.querySelector(".hearts");
+
+const balloons=document.querySelector(".balloons");
+
+const music=document.getElementById("music");
+
+
+
+music.volume = 0.25; // 🔉 softer on mobile
+
+
+
+document.body.addEventListener("click",()=>music.play(),{once:true});
+
+
+
+function togglePoem(){
+
+  const p=document.getElementById("poem");
+
+  if(p.style.display==="block"){
+
+    p.style.display="none";
+
+  }else{
+
+    p.style.display="block";
+
+    p.style.opacity="0";
+
+    p.style.animation="fadeIn 1.2s forwards";
+
+  }
+
+}
+
+
+
+function launchConfetti(){
+
+  for(let i=0;i<40;i++){   // 🎊 reduced amount
+
+    const c=document.createElement("div");
+
+    c.className="confetti";
+
+    c.style.left=Math.random()*100+"vw";
+
+    c.style.background=`hsl(${Math.random()*360},100%,50%)`;
+
+    c.style.animationDuration=(Math.random()*2+2)+"s";
+
+    document.body.appendChild(c);
+
+  }
+
+}
+
+launchConfetti();
+
+
+
+setInterval(()=>{
+
+  const h=document.createElement("span");
+
+  h.innerHTML="❤️";
+
+  h.style.left=Math.random()*100+"vw";
+
+  h.style.fontSize=(Math.random()*20+18)+"px";
+
+  hearts.appendChild(h);
+
+  setTimeout(()=>h.remove(),7000);
+
+},360);
+
+
+
+setInterval(()=>{
+
+  const b=document.createElement("span");
+
+  b.innerHTML="🎈";
+
+  b.style.left=Math.random()*100+"vw";
+
+  balloons.appendChild(b);
+
+  setTimeout(()=>b.remove(),7000);
+
+},650);
+
+
+
+setInterval(()=>{
+
+  const item=document.createElement("span");
+
+  const emojis=["🎂","🕯️"];
+
+  item.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+  item.style.position="fixed";
+
+  item.style.left=Math.random()*100+"vw";
+
+  item.style.bottom="-40px";
+
+  item.style.fontSize=(Math.random()*22+20)+"px";
+
+  item.style.animation="float 7s linear";
+
+  document.body.appendChild(item);
+
+  setTimeout(()=>item.remove(),7000);
+
+},900);
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
